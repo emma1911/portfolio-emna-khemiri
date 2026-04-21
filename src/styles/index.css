@@ -1,0 +1,38 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--teal);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--navy);
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #1e3a5f;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: var(--teal);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #00ffee;
+}
