@@ -9,6 +9,13 @@ export function ExperienceSection() {
 
   const experiences = [
     {
+      title: 'Web App Developer – Freelance (SpaceLife RP)',
+      period: '2025 – 2026',
+      description:
+        'Sole developer for SpaceLife Roleplay’s community platform (spaceliferp.com): Discord OAuth with role-based access, Firebase-backed support tickets for players and staff, Discord reply notifications, and a vehicle shop synced from Discord channels.',
+      tech: 'React + Discord OAuth + Firebase + Discord API',
+    },
+    {
       title: 'Internship – Safran',
       period: '2024 – 2025',
       description:

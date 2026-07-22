@@ -1,13 +1,23 @@
 ﻿import { motion } from 'motion/react';
 import { useInView } from 'motion/react';
 import { useRef } from 'react';
-import { FileText } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 
 export function ProjectsSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   const projects = [
+    {
+      title: 'SpaceLife Roleplay',
+      description:
+        'Full community hub for a roleplay server: Discord login with role-based access, player/staff support tickets (Firebase), Discord reply notifications, and a vehicle shop synced from Discord channels. Built end-to-end as the sole developer for the client.',
+      tech: ['React', 'Discord OAuth', 'Firebase', 'Discord API'],
+      image: '/spaceliferp.png',
+      links: {
+        demo: 'https://spaceliferp.com/',
+      },
+    },
     {
       title: 'YUMMY',
       description:
@@ -105,12 +115,23 @@ export function ProjectsSection() {
                         className="px-3 py-1 text-sm rounded-full bg-[var(--teal)]/10 text-[var(--teal)] font-medium"
                       >
                         {tech}
-                      
-                      </span>))}
+                      </span>
+                    ))}
                   </div>
 
                   {/* Links */}
                   <div className="flex flex-wrap gap-3">
+                    {project.links.demo && project.links.demo !== '#' && (
+                      <a
+                        href={project.links.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--teal)] text-white text-sm font-medium hover:opacity-90 transition-opacity"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Live site
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
@@ -121,10 +142,3 @@ export function ProjectsSection() {
     </section>
   );
 }
-
-
-
-
-
-
-
