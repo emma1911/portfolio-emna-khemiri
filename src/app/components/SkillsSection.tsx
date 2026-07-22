@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { useInView } from 'motion/react';
 import { useRef } from 'react';
-import { Code, Database, Terminal, Layout } from 'lucide-react';
+import { Code, Database, Terminal, Layout, Puzzle } from 'lucide-react';
 
 export function SkillsSection() {
   const ref = useRef(null);
@@ -23,6 +23,11 @@ export function SkillsSection() {
       title: 'Programming Languages',
       icon: Code,
       skills: ['Java Native', 'JavaScript', 'PHP', 'SQL'],
+    },
+    {
+      title: 'Backend & Integrations',
+      icon: Puzzle,
+      skills: ['Firebase', 'Discord OAuth', 'Discord API', 'JWT'],
     },
     {
       title: 'Operating Systems',
